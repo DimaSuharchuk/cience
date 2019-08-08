@@ -1,0 +1,34 @@
+.-verdun-bg {
+    background: #323910;
+    color: #fff;
+}
+
+.-white {
+    color: #fff;
+}
+
+.-center {
+    text-align: center;
+}
+
+.-margin-top {
+    margin-top: 50px;
+}
+
+.-margin-bottom {
+    margin-bottom: 50px;
+}
+
+
+/**
+ * Media MEDIUM.
+ */
+@media (max-width: 1000px) {
+    .-margin-top-medium {
+        margin-top: 30px;
+    }
+
+    .-margin-bottom-medium {
+        margin-bottom: 30px;
+    }
+}

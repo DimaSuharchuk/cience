@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cience test</title>
-    <link rel="stylesheet" href="css/style.css">
 
+    <!--    foundation cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.min.css"
+          integrity="sha256-/O+WvT2Eeb1RIU6iMItEhi5xlHTCLHg2HgLmVGFWyW8=" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css"
+          integrity="sha256-NTds7atVCDeolLUzbcl45lx4gJYO+hNXCaX1wC2HQHc=" crossorigin="anonymous"/>
     <!--    fontawesome cdn -->
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/fontawesome.min.css"
           integrity="sha256-AaQqnjfGDRZd/lUp0Dvy7URGOyRsh8g9JdWUkyYxNfI=" crossorigin="anonymous"/>
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/solid.min.css"
           integrity="sha256-3FfMfpeajSEpxWZTFowWZPTv7k3GEu7w4rQv49EWsEY=" crossorigin="anonymous"/>
+
+    <!--    custom-->
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/blocks.css">
+    <link rel="stylesheet" href="css/modifiers.css">
 </head>
 <body>
 <!--Intro block begin-->
@@ -31,10 +41,10 @@
 </section>
 <!--Intro block end-->
 <!--Second block (services) begin-->
-<section id="scroll-down-block">
+<section class="services-block" id="scroll-down-block">
     <div class="row">
         <h2 class="block-header">Donec ut finibus velit</h2>
-        <div class="column medium-4">
+        <div class="column small-12 medium-4">
             <div class="service" data-scroll-reveal>
                 <div class="service-icon service-a"></div>
                 <h2 class="service-title">Service A</h2>
@@ -44,7 +54,7 @@
                 </p>
             </div>
         </div>
-        <div class="column medium-4">
+        <div class="column small-12 medium-4">
             <div class="service" data-scroll-reveal>
                 <div class="service-icon service-b"></div>
                 <h2 class="service-title">Service B</h2>
@@ -54,7 +64,7 @@
                 </p>
             </div>
         </div>
-        <div class="column medium-4">
+        <div class="column small-12 medium-4">
             <div class="service" data-scroll-reveal>
                 <div class="service-icon service-c"></div>
                 <h2 class="service-title">Service C</h2>
@@ -68,13 +78,13 @@
 </section>
 <!--Second block (services) end-->
 <!--Third block (two columns with overflow image) begin-->
-<section class="verdun-bg -margin-top">
+<section class="-verdun-bg -margin-top block-image-overflow">
     <div class="row">
-        <div class="column medium-6">
+        <div class="column small-12 medium-6">
             <img class="image-overflow" src="assets/images/img-side1.jpg" alt="man"/>
         </div>
-        <div class="column medium-6">
-            <h2 class="">Lorem ipsum dolor sit amet, consectetur elit eleifend mauris.</h2>
+        <div class="column small-12 medium-6">
+            <h2 class="-white">Lorem ipsum dolor sit amet, consectetur elit eleifend mauris.</h2>
             <p>
                 Phasellus quis sapien ac ex eleifend *erre non vulputate mi. Praesent in sodales lacus, et vehicu la ex.
                 Pellentesque elementum eu nIsl non posuere. Sed lobortis purus non ternpor dapibus.
@@ -92,22 +102,46 @@
     </div>
 </section>
 <!--Third block (two columns with overflow image) end-->
-<!--Fourth block (list items) begin-->
-<section>
+<!--Fourth block (benefits) begin-->
+<section class="benefits-block">
     <div class="row">
-        <div class="column medium-6">
+        <div class="column small-6">
             <div class="item">
                 <div class="item-icon icon-planet"></div>
                 <div class="item-title">
                     Proh hendrerit eu magna egestas.
                 </div>
             </div>
+        </div>
+        <div class="column small-6">
+            <div class="item">
+                <div class="item-icon icon-target"></div>
+                <div class="item-title">
+                    Fusce nunc fells, pellentesque sit.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column small-6">
             <div class="item">
                 <div class="item-icon icon-call"></div>
                 <div class="item-title">
                     Nulla facilisis tellus eget neque.
                 </div>
             </div>
+        </div>
+        <div class="column small-6">
+            <div class="item">
+                <div class="item-icon icon-diagram"></div>
+                <div class="item-title">
+                    Proin bibendum sem sed ornare.
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column small-6">
             <div class="item">
                 <div class="item-icon icon-schedule"></div>
                 <div class="item-title">
@@ -115,19 +149,7 @@
                 </div>
             </div>
         </div>
-        <div class="column medium-6">
-            <div class="item">
-                <div class="item-icon icon-target"></div>
-                <div class="item-title">
-                    Fusce nunc fells, pellentesque sit.
-                </div>
-            </div>
-            <div class="item">
-                <div class="item-icon icon-diagram"></div>
-                <div class="item-title">
-                    Proin bibendum sem sed ornare.
-                </div>
-            </div>
+        <div class="column small-6">
             <div class="item">
                 <div class="item-icon icon-idea"></div>
                 <div class="item-title">
@@ -137,7 +159,7 @@
         </div>
     </div>
 </section>
-<!--Fourth block (list items) end-->
+<!--Fourth block (benefits) end-->
 <!--Fifth block (video) begin-->
 <section>
     <div class="row">
@@ -157,34 +179,32 @@
 <!--Fifth block (video) end-->
 <!--Sixth block (partners) begin-->
 <section>
-    <div class="row">
-        <div class="partners">
-            <div class="partner">
-                <img src="assets/partners/veniam.png" alt="veniam"/>
-            </div>
-            <div class="partner">
-                <img src="assets/partners/alpha.png" alt="alpha"/>
-            </div>
-            <div class="partner">
-                <img src="assets/partners/fugiat.png" alt="fugiat"/>
-            </div>
-            <div class="partner">
-                <img src="assets/partners/aquatree.png" alt="aquatree"/>
-            </div>
-            <div class="partner">
-                <img src="assets/partners/connect.png" alt="connect"/>
-            </div>
-            <div class="partner">
-                <img src="assets/partners/spine.png" alt="spine"/>
-            </div>
+    <div class="partners row">
+        <div class="partner column">
+            <img src="assets/partners/veniam.png" alt="veniam"/>
+        </div>
+        <div class="partner column">
+            <img src="assets/partners/alpha.png" alt="alpha"/>
+        </div>
+        <div class="partner column">
+            <img src="assets/partners/fugiat.png" alt="fugiat"/>
+        </div>
+        <div class="partner column">
+            <img src="assets/partners/aquatree.png" alt="aquatree"/>
+        </div>
+        <div class="partner column">
+            <img src="assets/partners/connect.png" alt="connect"/>
+        </div>
+        <div class="partner column">
+            <img src="assets/partners/spine.png" alt="spine"/>
         </div>
     </div>
 </section>
 <!--Sixth block (partners) end-->
 <!--Seventh block (calendar + footer) begin-->
-<section class="verdun-bg" id="calendar">
+<section class="-verdun-bg" id="calendar">
     <div class="row">
-        <h2>
+        <h2 class="-white -center -margin-bottom-medium">
             Vestibulum ornare nec enim at viverra integer non quam euismod.
         </h2>
         <!-- Calendly inline widget begin -->
@@ -196,7 +216,7 @@
                 src="//assets.calendly.com/assets/external/widget.js">
         </script>
         <!-- Calendly inline widget end -->
-        <footer class="row">
+        <footer class="-margin-top-medium">
             <img src="assets/icons/logo.svg" alt="flaghike logo" class="logo-img"/>
             <span>&copy; 2019 FlagHike &middot; All Rights Reserved</span>
         </footer>

@@ -1,79 +1,11 @@
-@import url('//fonts.googleapis.com/css?family=Open+Sans:300,400,700');
-
-/* Main. */
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 300;
-    color: #333;
-}
-
-div {
-    margin: 0;
-    padding: 0;
-}
-
-section {
-    padding: 50px;
-}
-
-.row {
-    width: 100%;
-    margin: 0 auto;
-    max-width: 62.5rem;
-    position: relative;
-}
-
-.row:after {
-    clear: both;
-}
-
-.row:before, .row:after {
-    content: " ";
-    display: table;
-}
-
-.column {
-    position: relative;
-    padding-left: .9375rem;
-    padding-right: .9375rem;
-    float: left;
-}
-
-[class*="column"] + [class*="column"]:last-child {
-    float: right;
-}
-
-.medium-4 {
-    width: 33.3333333333%;
-}
-
-.medium-6 {
-    width: 50%;
-}
-
-h1, h2, h3 {
-    font-size: 3em;
-    font-weight: 300;
-}
-
-h2 {
-    font-size: 2em;
-}
-
 /* First block (intro block with scroll down). */
-
 #intro {
     padding: 0;
     width: 100%;
     height: 100vh;
     position: relative;
     background: url("../assets/images/bg-header-desktop.jpg") rgba(0, 0, 0, .4) fixed;
+    background-position-x: right;
     background-size: cover;
     background-blend-mode: multiply;
 }
@@ -127,6 +59,10 @@ h2 {
     z-index: 2;
 }
 
+.scroll-down-button:hover {
+    color: #fff;
+}
+
 .scroll-down-pulse {
     animation: pulse 1s infinite ease-in-out;
 }
@@ -148,7 +84,6 @@ h2 {
 }
 
 /* Second block (services). */
-
 .block-header {
     text-transform: uppercase;
     text-align: center;
@@ -172,7 +107,7 @@ h2 {
 .service-icon {
     width: 80px;
     height: 80px;
-    margin: auto;
+    margin: 0 auto 30px;
 }
 
 .service-a {
@@ -189,23 +124,15 @@ h2 {
 
 .service-title {
     color: #b29a50;
+    margin-bottom: 30px;
 }
 
 /* Third block (two columns with overflow image). */
-
-.verdun-bg {
-    background: #323910;
-    color: #fff;
-}
-
-.-margin-top {
-    margin-top: 50px;
-}
-
 .image-overflow {
     float: right;
     margin-top: -100px;
     margin-right: .9375rem;
+    max-width: inherit;
 }
 
 .book-meeting {
@@ -222,7 +149,10 @@ h2 {
     margin-top: 50px;
 }
 
-/* Fourth block (list items). */
+/* Fourth block (benefits). */
+.benefits-block .row:last-child .item {
+    margin-bottom: 0;
+}
 
 .item {
     display: flex;
@@ -230,14 +160,11 @@ h2 {
     margin-bottom: 50px;
 }
 
-.item:last-child {
-    margin-bottom: 0;
-}
-
 .item-icon {
     width: 70px;
     height: 70px;
     margin-right: 30px;
+    background-repeat: no-repeat;
 }
 
 .icon-planet {
@@ -265,11 +192,10 @@ h2 {
 }
 
 .item-title {
-    font-size: 20px;
+    font-size: 1.2em;
 }
 
 /* Fifth block (video). */
-
 .iframe-abstract {
     width: 80%;
     border: none;
@@ -309,7 +235,6 @@ h2 {
 }
 
 /* Sixth block (partners). */
-
 .partners {
     display: flex;
     align-items: center;
@@ -326,4 +251,156 @@ footer {
 
 footer span {
     font-size: 15px;
+}
+
+
+/**
+ * Media MEDIUM.
+ */
+@media (max-width: 1000px) {
+    /* Intro block begin */
+    #intro {
+        background: url("../assets/images/bg-header-desktop.jpg") rgba(0, 0, 0, .4) fixed;
+        background-position-x: right;
+        background-size: cover;
+    }
+
+    #intro h1 {
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .logo {
+        margin-left: 30px;
+    }
+
+    /* Intro block end */
+    /* Second block (services) begin */
+    .services-block h2 {
+        font-size: 2em;
+    }
+
+    .service-icon {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto 20px;
+    }
+
+    .service-title {
+        color: inherit;
+        margin-bottom: 20px;
+    }
+
+    /* Second block (services) end */
+    /* Sixth block (partners) begin */
+    .partners {
+        flex-wrap: wrap;
+    }
+
+    .partner {
+        width: 33.33333333333%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    /* Sixth block (partners) end */
+}
+
+/**
+ * Media SMALL.
+ */
+@media (max-width: 640px) {
+
+    /* Intro block begin */
+    #intro {
+        background: url("../assets/images/bg-header-mobile.jpg") rgba(0, 0, 0, .4) fixed;
+        background-size: cover;
+    }
+
+    #intro h1 {
+        margin-top: 20px;
+        transform: initial;
+    }
+
+
+    .logo {
+        align-items: flex-end;
+        justify-content: center;
+        height: 40vh;
+    }
+
+    .scroll-down-wrapper {
+        margin-top: 50px;
+    }
+
+    /* Intro block end */
+    /* Second block (services) begin */
+    .service {
+        margin-bottom: 50px;
+    }
+
+    /* Second block (services) end */
+    /* Third block (two columns with overflow image) begin */
+    .block-image-overflow {
+        margin-top: 40%;
+        text-align: center;
+    }
+
+    .image-overflow {
+        width: 100%;
+        margin-top: -60%;
+        margin-right: 0;
+        padding-bottom: 30px;
+    }
+
+    .block-image-overflow h2 {
+        font-size: 1.5em;
+        margin-bottom: 30px;
+    }
+
+    .book-meeting {
+        margin: 0 0 30px;
+    }
+
+    /* Third block (two columns with overflow image) end */
+    /* Fourth block (benefits) begin */
+    .item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .item-icon {
+        margin: 0 0 30px;
+    }
+
+    .item-title {
+        font-size: 1em;
+    }
+
+    /* Fourth block (benefits) end */
+    /* Fifth block (video) begin */
+    .iframe-video-placeholder .rectangle {
+        width: 80px;
+        height: 50px;
+        border: 1px solid #fff;
+    }
+
+    .iframe-video-placeholder .rectangle .play {
+        border-width: 8px 0 8px 14px;
+    }
+
+    /* Fifth block (video) end */
+    /* Sixth block (partners) begin */
+    .partner {
+        width: 50%;
+    }
+
+    /* Sixth block (partners) end */
+    /* Seventh block (calendar + footer) begin */
+    footer .logo-img {
+        display: none;
+    }
+
+    /* Seventh block (calendar + footer) end */
 }
